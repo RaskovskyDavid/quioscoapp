@@ -1,5 +1,6 @@
-import '../styles/globals.css'
-import { QuioscoProvider } from '../context/QuioscoPriver'
+import "../styles/globals.css";
+import { QuioscoProvider } from "../context/QuioscoProvider";
+
 function MyApp({ Component, pageProps }) {
   return (
     <QuioscoProvider>
@@ -8,4 +9,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp
+export default MyApp;

@@ -1,8 +1,8 @@
 import Image from "next/image";
-
-
+import useQuiosco from "../hooks/useQuiosco";
+import Categoria from "./Categoria";
 const Sidebar = () => {
-    // const { categorias } = useQuiosco();
+     const { categorias } = useQuiosco();
   
     return (
       <>
@@ -15,9 +15,9 @@ const Sidebar = () => {
         />
   
         <nav className="mt-10">
-          {/* {categorias.map((categoria) => (
+          {categorias.map((categoria) => (
             <Categoria key={categoria.id} categoria={categoria} />
-          ))} */}
+          ))}
         </nav>
       </>
     );

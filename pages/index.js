@@ -2,16 +2,17 @@ import { PrismaClient } from '@prisma/client'
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../layout/Layout.js'
+import useQuiosco from "../hooks/useQuiosco";
 export default function Home() {
-  // console.log(categorias)
+  const { categoriaActual } = useQuiosco();
 
   return (
-    <>
-    <h1>Next j1 </h1>
-    <Layout pagina="Menu">
-      
+    <Layout pagina={`Menú ${categoriaActual?.nombre}`}>
+        <h1 className="text-4xl font-black">{categoriaActual?.nombre}</h1>
+      <p className="text-2xl my-10">
+        Elige y personaliza tu pedido a continuación
+      </p>
     </Layout>
-    </>
     
   )
 }
